@@ -1,0 +1,7 @@
+IMPORTANT
+
+You will need to print a mount for the BLTOUCH/3DTouch before installing anything.
+
+1. I have an unmodified Hot End, so I printed this one https://www.thingiverse.com/thing:3148733 designed by the user "registeredthing". You will need an extra M3 nut and bolt or screw for this design. Follow the instrucctions on the website. Be sure to donate if you're able.
+
+2. Follow the rest of the instruction files in order.

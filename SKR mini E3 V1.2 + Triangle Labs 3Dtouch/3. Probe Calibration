@@ -1,0 +1,30 @@
+PROBE CALIBRATION
+
+0. Do not HOME/G28 before calibrating unless your life depends on it or I tell you to explicitly.
+
+1. Turn off your printer
+
+2. Adjust the height of the probe mount so that the probe with the plunger retracted is just a bit higher than the nozzle to protect it in case of failure.
+
+3. Place a piece of soft material (softer than the bed at least, cardboard is fine) on the bed (to protect both the bed and the nozzle).
+
+4. Turn the printer on, the probe should test iself a few times and remain in it's retracted state with the light on to signify everything is fine. If it stays blinking (probe alarm), turn the printer off, check your wiring, and check the firmware was loaded correctly (on the LCD, go to "Configuration" and see if the "Bltouch" menu is there). If the BLtouch menu is there, it means the firmware loaded correctly, but if the problem persists, you might have not enabled all the necessary characteristics.
+
+4. Home all axes and be prepared to emergency shut down the machine in case something fails. Follow the Z homing closely, the plunger should retract moments after touching.
+
+5. If everything goes fine, Remove the soft material. If not, go back to Step 4.
+
+6. Level your bed manually once. I like this method by CHEP: https://www.youtube.com/watch?v=_EfWVUJjBdA. I recommed to do this step and the next with your nozzle and bed already heated, to make sure the warping due to temperature is present.
+
+7. After leveling in the previous step, just follow this excellent tutorial on how to calibrate your Z offset: https://www.youtube.com/watch?v=y_1Kg45APko. Do take note that at the end he makes a minor mistake: 2.49 + thickness of the paper is equal to 2.59 and not 2.50, printer paper is about 0.1mm thick and not 0.01mmm. If you use a paper, then it's whatever the display says + 0.1, and if you use a gap tool, it's whatever the display says + gap tool width.
+
+8. Now, to actually make use of Auto Bed Leveling, in the Start Gcode script in your slicer of choice, you need to add "M420 S1" after the last G28 in said script. Now you have 2 choices:
+    
+    a. You can level maybe once a day or so by running a G29 and then an M500, to store the leveling values before printing and then M420 S1 will use those.
+
+    b. Level before each print by adding the G29 command after homing (and warming up!) in your Start Gcode script. This way it's fully automatic, but "slower" since the probin is done after each print (45-60s extra at best).
+
+8. Turn off your printer, glue whatever needs glue and then put the cover screws back.
+
+9. Turn your printer back, you're done, enjoy.
+

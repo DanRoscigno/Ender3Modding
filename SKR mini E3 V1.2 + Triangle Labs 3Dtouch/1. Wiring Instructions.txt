@@ -1,0 +1,37 @@
+WIRING INSTRUCTIONS
+
+1. Turn off & unplug printer.
+
+2. Move Hotend to the right and bed to the back.
+
+3. Remove the 2 top front screws from the mainboard topcase.
+
+4. Move bed to he front and remove the back screw form the mainboard topcase.
+
+5. Move ther bed to the back again and remove the topcase carefuly because the fan is still connected.
+
+6. With everything still connected, take a picture for reference and troubleshooting. You can try to line up the cables a bit if the view is too messy.
+
+7. Cables are glued with hot glue. I strongly discourage "just pulling" the cables to unglue them. Work the glue off with any plastic tool that works and be gentle about it. Avoid using a metal tool unless you know what you're doing, you could scratch the board and blow it.
+
+8. Label one cable of each pair to know where it was before disconnecting them.
+
+9. Reconnect all cables to your new SKR following the diagram available. Pay mind that the order of some cable pairs is reversed in the new board, and in particular, the layer and mainboard fans exchange their positions with one another. It is explicitly labeled that way in the diagram.
+
+10. Adding BLTOUCH/3DTOUCH:
+    a. 
+        - The diagram includes the BLTOUCH/3DTOUCH (Triangle Labs) setup. You can remove the Z axis limit switch from the printer, it won't be used anymore. Some people wire the probe through the Hot End sleeve, but I prefer to run it independently. Use whatever other type of sleeve you like, or none. For this you might have to cut the zip ties and install some new ones later. Just copy the positions of the coloring and you're set.
+
+        - I recommend connecting the end of the extension cable where each cable has it's individual termianl to the board. This way, if for some reason the order is wrong, you don't have to undo the whole setup and you can just change it at the connector.
+
+        - For other brands of BLTOUCH clones, yo will need to check the which color carries which signal and modify accordingly. The diagram shows the working order of signals.
+        
+        - If you want to tidy up the connection, you can cut the intermediate pin headers (the ones that connect the probe to the extension) and solder them directly.
+    
+    b. If you're not installing this accessory, just plug the Z-stop (limit switch) cable where the Black & White cable from the Bltouch goes in the diagram.
+
+11. Install the heatsinks on top of the TMC2209 chips. You have to peel the cover of the sticker/heat transfer material.
+
+12. CHECK and RE-CHECK your wiring, inverted polairty can both bust the mainboard itself or any peripherals connected, such as the probe.
+
+13. Plug the printer back in and don't screw the top cover back until after all the firmware is properly set up. It's also a good idea to wait until the to put some hot glue (if you'd like) back on wherever it had before, after setting up the firmware as well.
