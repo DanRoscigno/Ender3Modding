@@ -40,4 +40,4 @@ FIRMWARE COMPILATION INSTTRUCTIONS
 
 8. Wait till it reboots and you're done.
 
-9. Go to Instruction File "3. Probe Calibration".
+9. Go to Instruction File "3. Probe Calibration.txt".
