@@ -6,9 +6,9 @@ WIRING INSTRUCTIONS
 
 3. Remove the 2 top front screws from the mainboard topcase.
 
-4. Move bed to he front and remove the back screw form the mainboard topcase.
+4. Move bed to the front and remove the back screw form the mainboard topcase.
 
-5. Move ther bed to the back again and remove the topcase carefuly because the fan is still connected.
+5. Move the bed to the back again and remove the topcase carefuly because the fan is still connected.
 
 6. With everything still connected, take a picture for reference and troubleshooting. You can try to line up the cables a bit if the view is too messy.
 
@@ -28,7 +28,7 @@ WIRING INSTRUCTIONS
         
         - If you want to tidy up the connection, you can cut the intermediate pin headers (the ones that connect the probe to the extension) and solder them directly.
     
-    b. If you're not installing this accessory, just plug the Z-stop (limit switch) cable where the Black & White cable from the Bltouch goes in the diagram.
+    b. If you're not installing this accessory, just plug the Z-stop (limit switch) cable where the Black & White cable from the BLTOUCH/3DTOUCH goes in the diagram.
 
 11. Install the heatsinks on top of the TMC2209 chips. You have to peel the cover of the sticker/heat transfer material.
 
