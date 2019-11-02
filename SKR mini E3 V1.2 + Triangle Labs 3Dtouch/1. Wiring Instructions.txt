@@ -35,3 +35,5 @@ WIRING INSTRUCTIONS
 12. CHECK and RE-CHECK your wiring, inverted polairty can both bust the mainboard itself or any peripherals connected, such as the probe.
 
 13. Plug the printer back in and don't screw the top cover back until after all the firmware is properly set up. It's also a good idea to wait until the to put some hot glue (if you'd like) back on wherever it had before, after setting up the firmware as well.
+
+14. Go to Instruction File "2. Firmware Compilation.txt".
