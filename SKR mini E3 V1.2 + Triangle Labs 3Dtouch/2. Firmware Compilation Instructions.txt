@@ -3,13 +3,13 @@ FIRMWARE COMPILATION INSTTRUCTIONS
 1. The Marlin source code attached was based on BigTreeTech's SKR mini e3 V1.2 code from their github repo and has the following lines already activated or modified for BLTOUCH/3DTOUCH to run:
     a. In Marlin-2.0.x/Marlin/Configure.h
 
-        - #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 412 } on line 724. Change the last number for 93 if you have the stock extruder (I use a BMG clone)
+        - #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 412 } on line 724. Change the last number to 93 if you have the stock extruder (I use a BMG clone)
 
-        - #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN on line 820. This is needed since we're connecting the probe to where the Z limit switch was (there seesm to be a bug when trying to use the intented "probe" pin).
+        - #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN on line 820. This is needed since we're connecting the probe to where the Z limit switch was (there seems to be a bug when trying to use the intented "probe" pin).
 
         - #define BLTOUCH on line 870
 
-        - #define NOZZLE_TO_PROBE_OFFSET {-44, -14, 0} on line 928. These correspond to the X, Y, Z offset of the probe referenced to the nozzle. If you use the same mount, you don't need to change the non zero values, if you use a different one, you'll have to figure out the X and Y offset of your probe. There's a diagram in the source code.
+        - #define NOZZLE_TO_PROBE_OFFSET {-44, -14, 0} on line 928. These correspond to the X, Y, Z offset of the probe referenced to the nozzle. If you use the same mount I recommended on file 0, you don't need to change the non zero values. If you use a different one, you'll have to figure out the X and Y offset of your probe. There's a diagram in the source code for doing so.
         
         - #define MIN_PROBE_EDGE 20 on line 931. This means the probe keeps off 20 mm from any edge of the bed (to avoid obstacles, like clips and whatnot, modify as needed).
     
@@ -28,14 +28,16 @@ FIRMWARE COMPILATION INSTTRUCTIONS
 
 2. Follow the instructions in the following link to install the enviroment for compiling: https://platformio.org/install/ide?install=vscode
 
-3. After that's done, restart VSCode just in case and in the "Pio Home" tab tht will greet you, click on "Open Project" and open the Marlin-2.0.x/Marlin folder.
+3. After that's done, restart VSCode just in case and in the "Pio Home" tab that will greet you, click on "Open Project" and open the Marlin-2.0.x folder.
 
 4. Make any extra modifications you want or need to the firmware and then look in the gutter (the bottom menu), for a check mark. Click it to compile and wait for a minute or so until it says it's done.
 
-5. Navigate to the build folder (inside the hidden folder ".pio" located in Marlin-2.0.x/.pio) the relative path from where this file is, should be "./Marlin-2.0.x/.pio//build/STM32F103RC_bigtree/"
+5. Navigate to the build folder (the ".pio" folder in the path could be a hidden folder in your system) the relative path from where this file is, should be "./Marlin-2.0.x/.pio/build/STM32F103RC_bigtree/"
 
-6. In the folder you'll see a "firmware.bin" file. Copy it to a clean SD in formatted to FAT32.
+6. In the folder you'll see a "firmware.bin" file. Copy it to a clean SD formatted to FAT32.
 
-7. Eject the SD and put it on your printer. Turn your printer on and wait for it to turn on. After that, put the SD in the slot, and then open the case to the mainboard and press the reset button that's behind the USB port.
+7. Eject the SD and put it on your printer. Turn your printer on and wait for it to turn on completely. After that, put the SD in the slot, and then open the case to the mainboard and press the reset button that's behind the USB port.
 
 8. Wait till it reboots and you're done.
+
+9. Go to Instruction File "3. Probe Calibration".
